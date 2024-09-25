@@ -1,20 +1,45 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      Indicadores Financieros
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title style="text-align: center;"><strong>Indicadores</strong> {{ hoy | date }}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-grid>
+        <ion-row>
+          <ion-col size="6" class="ion-text-end">
+            <strong>Dolar :  </strong>
+          </ion-col>
+          <ion-col size="6" class="ion-text-start">
+            {{ dollarValue }}
+          </ion-col>
+        </ion-row>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+        <ion-row>
+          <ion-col size="6" class="ion-text-end">
+            <strong>Café :  </strong>
+          </ion-col>
+          <ion-col size="6" class="ion-text-start">
+            {{ CoffePrice }}
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col size="6" class="ion-text-end">
+            <strong>Cacao :  </strong>
+          </ion-col>
+          <ion-col size="6" class="ion-text-start">
+            {{ CocoaPrice }}
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-content>
+  </ion-card>
 </ion-content>
