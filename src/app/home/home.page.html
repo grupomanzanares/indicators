@@ -1,13 +1,13 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Indicadores Financieros
+  <ion-toolbar class="ion-text-center">
+    <ion-title style="color: black;">
+      Indicadores Financieross
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-card>
+  <!-- <ion-card>
     <ion-card-header>
       <ion-card-title style="text-align: center;"><strong>Indicadores</strong> {{ hoy | date }}</ion-card-title>
     </ion-card-header>
@@ -41,5 +41,51 @@
         </ion-row>
       </ion-grid>
     </ion-card-content>
-  </ion-card>
+  </ion-card> -->
+
+  <ion-grid class="ion-text-center ion-text-center col">
+    <ion-row>
+      <ion-col>
+        <ion-card color="light" class="som">
+          <ion-card-title class="ion-padding-vertical">
+            <strong>Indicador Dolar</strong>
+          </ion-card-title>
+          <i class="fa-regular fa-dollar-sign" style="font-size: 38px;" ></i>
+          <ion-card-content class="cont">
+            <ion-col size="6" class="ion-text-start">
+              {{ dollarValue }}
+            </ion-col>
+          </ion-card-content>
+        </ion-card>      
+      </ion-col>
+      <ion-col>
+        <ion-card color="light" class="som">
+          <ion-card-title class="ion-padding-vertical ion-text-center">
+              <strong>Indicador Café</strong>
+          </ion-card-title>
+          <ion-icon aria-hidden="true" name="cafe-outline" style="font-size: 35px;"></ion-icon>
+          <ion-card-content class="cont">
+            <ion-row class="ion-justify-content-center r ion-align-items-center">
+              <ion-col size="auto" class="ion-text-center cof">
+                {{ CoffePrice }}
+              </ion-col>
+            </ion-row>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+      <ion-col>
+        <ion-card color="light" class="som">
+          <ion-card-title class="ion-padding-vertical">
+            <strong>Indicador Cacao</strong>
+          </ion-card-title>
+          <ion-icon aria-hidden="true" name="cafe-outline" style="font-size: 35px;"></ion-icon>
+          <ion-card-content class="cont">
+            <ion-col size="6" class="ion-text-start">
+              {{ CocoaPrice }}
+            </ion-col>
+          </ion-card-content>
+        </ion-card> 
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
